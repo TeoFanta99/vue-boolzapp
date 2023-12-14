@@ -149,3 +149,31 @@ main {
 
 
 /* STILI DELLA CHAT INFO */
+#all-messages {
+    width: 100%;
+    /* debug */
+    background-color: blue;
+    /* min-height: 500px; */
+    height: calc(100% - 80px - 60px);
+}
+
+#bottom-bar {
+    display: flex;
+    align-items: center;
+    /* debug */
+    background-color: #F3EEEA;
+    min-height: 80px;
+}
+
+#bottom-bar i {
+    font-size: 30px;
+    padding: 10px 20px;
+    color: #576366;
+}
+
+#bottom-bar input {
+    height: 60px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
