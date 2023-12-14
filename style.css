@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* BACKGROUND E MAIN CONTAINER */
+
 main {
     position: relative;
     height: 100vh;
@@ -23,13 +25,54 @@ main {
     min-height: calc(100vh - 150px);
 }
 
+
+
+
+
+/* STILI GENERALI DEL MAIN CONTAINER */
 #main-container {
     width: 80%;
     position: absolute;
     top: 20px;
     left: 50%;
     transform: translate(-50%);
+    display: flex;
     /* debug */
     background-color: red;
     min-height: calc(100vh - 50px);
 }
+
+#left-bar {
+    width: 35%;
+    min-width: 100px;
+    border-right: 1px solid lightgrey;
+    /* debug */
+    background-color: white;
+}
+
+#chat-info {
+    width: 65%;
+    /* debug */
+    background-color: lightgreen;
+}
+
+
+/* STILI DELLA LEFT BAR */
+.user-top {
+    width: 100%;
+    background-color: #EAEAEA;
+    height: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* STILI DELLA CHAT INFO */
