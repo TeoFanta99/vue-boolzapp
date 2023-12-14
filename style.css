@@ -4,16 +4,32 @@
     box-sizing: border-box;
 }
 
+main {
+    position: relative;
+    height: 100vh;
+}
+
 .background {
     width: 100%;
 }
 
 #top-bg {
     background-color: #039688;
-    min-height: 20vh;
+    min-height: 150px;
 }
 
 #bottom-bg {
     background-color: #D8DBD6;
-    min-height: 85vh;
+    min-height: calc(100vh - 150px);
+}
+
+#main-container {
+    width: 80%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    /* debug */
+    background-color: red;
+    min-height: calc(100vh - 50px);
 }
