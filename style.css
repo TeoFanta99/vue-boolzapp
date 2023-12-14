@@ -70,7 +70,13 @@ main {
     height: 75px;
 }
 
-
+#search-chat {
+    background-color: #FAFAFA;
+    width: 100%;
+    display: flex;
+    /* debug */
+    min-height: 40px;
+}
 
 
 
