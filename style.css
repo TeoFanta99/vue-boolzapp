@@ -95,8 +95,21 @@ main {
     background-color: #FAFAFA;
     width: 100%;
     display: flex;
+    padding: 5px;
     /* debug */
     min-height: 40px;
+}
+
+#search-chat i {
+    padding: 8px 25px;
+    border: 1px solid lightgray;
+    color: #B6B9BB;
+}
+
+#search-chat input {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-left: none;
 }
 
 .chat {
