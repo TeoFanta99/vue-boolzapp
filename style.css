@@ -66,7 +66,24 @@ main {
     width: 100%;
     background-color: #EAEAEA;
     height: 60px;
+    display: flex;
 }
+
+.icons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50px;
+    color: #B1B0AE;
+    /* debug */
+    background-color: green;
+
+}
+
+.name {
+    width: calc(100% - 140px);
+}
+
 
 #desktop-notification {
     background-color: #8EDAFC;
@@ -96,13 +113,17 @@ main {
 }
 
 .chat-details {
-    width: calc(100% - 120px);
+    width: calc(100% - 140px);
     background-color: yellow;
     display: flex;
     flex-direction: column;
 }
 
-.last-message {
+#left-bar .chat-details {
+    width: calc(100% - 120px);
+}
+
+.last-message, .last-access {
     font-size: 13px;
     color: grey;
 }
