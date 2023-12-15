@@ -134,6 +134,7 @@ main {
     width: 100%;
     border: 1px solid lightgray;
     border-left: none;
+    padding: 10px;
 }
 
 #all-chat {
