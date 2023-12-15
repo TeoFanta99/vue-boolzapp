@@ -70,12 +70,17 @@ main {
     display: flex;
 }
 
+.top-bar-half {
+    flex-grow: 1;
+}
+
 .icons-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 50px;
+    width: 70px;
     color: #B1B0AE;
+    margin-right: 0;
     /* debug */
     background-color: green;
 
@@ -163,6 +168,7 @@ main {
     width: 80%;
     height: auto;
     border-radius: 50%;
+    object-fit: inherit;
 }
 .chat-details {
     width: calc(100% - 140px);
