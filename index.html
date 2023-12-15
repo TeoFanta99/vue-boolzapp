@@ -68,10 +68,10 @@
                     <div id="all-chat">
 
                         <!-- da replicare con js -->
-                        <div class="chat">
+                        <div class="chat" v-for="(contact, i) in contacts">
                             <div class="img-container"></div>
                             <div class="chat-details">
-                                <div class="chat-name">Michele</div>
+                                <div class="chat-name">{{contact.name}}</div>
                                 <div class="last-message">Ultimo messaggio</div>
                             </div>
                         </div>
@@ -100,7 +100,10 @@
                     </div>
 
                     <!-- sezione con tutti i messaggi -->
-                    <div id="all-messages"></div>
+                    <div id="all-messages">
+
+
+                    </div>
 
                     <!-- barra in basso con emoji e input per invio messaggio -->
                     <div id="bottom-bar">
