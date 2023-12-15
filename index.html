@@ -109,7 +109,7 @@
                     <!-- barra in basso con emoji e input per invio messaggio -->
                     <div id="bottom-bar">
                         <i class="fa-regular fa-face-smile"></i>
-                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage">
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addNewMessage">
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                     
