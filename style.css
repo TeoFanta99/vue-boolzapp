@@ -171,12 +171,6 @@ main {
 }
 
 
-
-
-
-
-
-
 /* STILI DELLA CHAT INFO */
 #left-bar, #chat-info {
   display: flex;
@@ -187,11 +181,39 @@ main {
 #all-messages {
     width: 100%;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
     /* debug */
     background-image: url(img/Wallpaper.png);
     background-size: contain;
     height: calc(100vh - 140px);
 }
+
+.message {
+    margin: 10px;
+    width: 40%;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.sent-message {
+    background-color: #D5F9BA;
+    align-self: flex-end;
+}
+
+.received-message {
+    background-color: white;
+}
+
+.message-data {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    font-size: 10px;
+    color: rgb(178, 178, 178);
+}
+
 
 #bottom-bar {
     display: flex;
