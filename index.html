@@ -39,8 +39,10 @@
 
                     <!-- riga top left bar -->
                     <div class="user-top">
-                        <div class="img-container"></div>
-                        <div class="name">Michele</div>
+                        <div class="img-container">
+                            <img src="img/Screenshot 2023-12-15 alle 15.39.19.png" alt="Matteo">
+                        </div>
+                        <div class="top-bar-half">Matteo</div>
                         <div class="icons-container">
                             <i class="fa-solid fa-circle-notch"></i>
                             <i class="fa-solid fa-message"></i>
@@ -90,7 +92,7 @@
                         <div class="img-container">
                             <img :src="contacts[activeItem].avatar" :alt=contacts[activeItem].name>
                         </div>
-                        <div class="chat-details">
+                        <div class="top-bar-half">
                             <div class="name">{{contacts[activeItem].name}}</div>
                             <div class="last-message">Ultimo messaggio</div>
                         </div>
