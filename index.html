@@ -68,7 +68,7 @@
                     <div id="all-chat">
 
                         <!-- da replicare con js -->
-                        <div class="chat" v-for="(contact, i) in contacts">
+                        <div class="chat" v-for="(contact, i) in contacts" @click="select(i)">
                             <div class="img-container"></div>
                             <div class="chat-details">
                                 <div class="chat-name">{{contact.name}}</div>
@@ -103,12 +103,6 @@
                     <div id="all-messages" v-if="contacts[activeItem].messages.length > 0">
 
                         <span v-for="(message, i) in contacts[activeItem].messages" :class="message.status === 'sent' ? 'sent-message' : 'received-message'" class="message">{{message.message}}</span>
-
-                        <!-- <span class="message sent-message">
-                            {{contacts[0].messages[0].message}}
-                            <span class="message-data">{{contacts[0].messages[0].date}}</span>
-                        </span>
-                        <span class="message received-message">dd</span> -->
 
                     </div>
 

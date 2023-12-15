@@ -178,7 +178,9 @@ createApp ({
 
     },
     methods: {
-
+        select (index) {
+            this.activeItem = index;
+        }
     }
 
 }).mount("#app")
