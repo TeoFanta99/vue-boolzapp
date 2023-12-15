@@ -37,13 +37,14 @@ main {
 #main-container {
     width: 80%;
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 50%;
     transform: translate(-50%);
     display: flex;
+    margin-bottom: 30px;
+    height: calc(100vh - 60px);
     /* debug */
     background-color: red;
-    min-height: calc(100vh - 50px);
 }
 
 #left-bar {
@@ -135,6 +136,11 @@ main {
     border-left: none;
 }
 
+#all-chat {
+    overflow-y: scroll;
+    height: calc(100vh - 200px);
+}
+
 .chat {
     background-color: orange;
     width: 100%;
@@ -172,13 +178,19 @@ main {
 
 
 /* STILI DELLA CHAT INFO */
+#left-bar, #chat-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 #all-messages {
     width: 100%;
+    overflow-y: scroll;
     /* debug */
     background-image: url(img/Wallpaper.png);
     background-size: contain;
-    /* min-height: 500px; */
-    height: calc(100% - 80px - 60px);
+    height: calc(100vh - 140px);
 }
 
 #bottom-bar {
@@ -186,7 +198,7 @@ main {
     align-items: center;
     /* debug */
     background-color: #F3EEEA;
-    min-height: 80px;
+    height: 80px;
 }
 
 #bottom-bar i {
