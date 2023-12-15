@@ -175,8 +175,8 @@ main {
 #all-messages {
     width: 100%;
     /* debug */
-    background-image: url(img/Whatsapp\ Wallpaper.jpg);
-    background-size: cover;
+    background-image: url(img/Wallpaper.png);
+    background-size: contain;
     /* min-height: 500px; */
     height: calc(100% - 80px - 60px);
 }
