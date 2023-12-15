@@ -180,6 +180,10 @@ createApp ({
     methods: {
         select (index) {
             this.activeItem = index;
+        },
+        addNewMessage () {
+            this.contacts[this.activeItem].messages.push({date: "adesso", message: this.newMessage, status: 'sent'});
+            this.newMessage= "";
         }
     }
 
