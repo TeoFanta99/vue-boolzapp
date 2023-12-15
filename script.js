@@ -189,6 +189,7 @@ createApp ({
                 this.contacts[this.activeItem].messages.push({date: "adesso", message: 'Ok', status: 'received'});
             }, 1000);
         },
+        
     }
 
 }).mount("#app")
