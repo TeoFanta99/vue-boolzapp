@@ -69,7 +69,9 @@
 
                         <!-- da replicare con js -->
                         <div class="chat" v-for="(contact, i) in contacts" @click="select(i)">
-                            <div class="img-container"></div>
+                            <div class="img-container">
+                                <img :src="contacts[i].avatar" alt="">
+                            </div>
                             <div class="chat-details">
                                 <div class="chat-name">{{contact.name}}</div>
                                 <div class="last-message">Ultimo messaggio</div>
