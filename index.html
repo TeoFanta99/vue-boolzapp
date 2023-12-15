@@ -108,7 +108,10 @@
                     <!-- sezione con tutti i messaggi -->
                     <div id="all-messages" v-if="contacts[activeItem].messages.length > 0">
 
-                        <span v-for="(message, i) in contacts[activeItem].messages" :class="message.status === 'sent' ? 'sent-message' : 'received-message'" class="message">{{message.message}}</span>
+                        <span v-for="(message, i) in contacts[activeItem].messages" :class="message.status === 'sent' ? 'sent-message' : 'received-message'" class="message">{{message.message}}
+                            <span class="message-data">{{message.date}}</span>
+                            <i class="fa-solid fa-chevron-down delete-message"></i>
+                        </span>
 
                     </div>
 
