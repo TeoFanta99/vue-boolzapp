@@ -70,7 +70,7 @@
                         <!-- da replicare con js -->
                         <div class="chat" v-for="(contact, i) in contacts" @click="select(i)">
                             <div class="img-container">
-                                <img :src="contacts[i].avatar" alt="">
+                                <img :src="contacts[i].avatar" :alt=contacts[i].name>
                             </div>
                             <div class="chat-details">
                                 <div class="chat-name">{{contact.name}}</div>
@@ -87,7 +87,9 @@
 
                     <!-- riga top box della chat nel dettaglio -->
                     <div class="user-top">
-                        <div class="img-container"></div>
+                        <div class="img-container">
+                            <img :src="contacts[activeItem].avatar" :alt=contacts[activeItem].name>
+                        </div>
                         <div class="chat-details">
                             <div class="name">{{contacts[activeItem].name}}</div>
                             <div class="last-message">Ultimo messaggio</div>
