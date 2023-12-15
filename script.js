@@ -184,6 +184,10 @@ createApp ({
         addNewMessage () {
             this.contacts[this.activeItem].messages.push({date: "adesso", message: this.newMessage, status: 'sent'});
             this.newMessage= "";
+            setTimeout(() => {
+                this.contacts[this.activeItem].messages.push({date: "adesso", message: 'Ok', status: 'received'});
+            }, 1000);
+            
         }
     }
 
