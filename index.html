@@ -63,14 +63,14 @@
                     <!-- barra ricerca chat -->
                     <div id="search-chat">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchUser">
                     </div>
 
                     <!-- tutte le chat -->
                     <div id="all-chat">
 
                         <!-- da replicare con js -->
-                        <div class="chat" v-for="(contact, i) in contacts" @click="select(i)">
+                        <div class="chat" v-for="(contact, i) in filteredContacts()" @click="select(i)">
                             <div class="img-container">
                                 <img :src="contacts[i].avatar" :alt=contacts[i].name>
                             </div>

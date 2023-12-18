@@ -8,7 +8,7 @@ createApp ({
         return {
             newMessage: "",
             activeItem: 0,
-            searchQuery: "",
+            searchUser: "",
             contacts: [
                 {
                     name: 'Michele',
@@ -189,7 +189,11 @@ createApp ({
                 this.contacts[this.activeItem].messages.push({date: "adesso", message: 'Ok', status: 'received'});
             }, 1000);
         },
-        
+        filteredContacts() {
+            return this.contacts.filter(contact => 
+                contact.name.toLowerCase().includes(this.searchUser.toLowerCase())
+            );
+        }
     }
 
 }).mount("#app")
