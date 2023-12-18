@@ -193,6 +193,13 @@ createApp ({
             return this.contacts.filter(contact => 
                 contact.name.toLowerCase().includes(this.searchUser.toLowerCase())
             );
+        },
+        toggleDropdown(index) {
+            // Imposta lo stato del menu a tendina per l'elemento cliccato
+            this.contacts[this.activeItem].messages[index].showDropdown = !this.contacts[this.activeItem].messages[index].showDropdown;
+        },
+        deleteMessage(index) {
+            this.contacts[this.activeItem].messages.splice(index, 1)
         }
     }
 
