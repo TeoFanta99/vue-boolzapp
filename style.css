@@ -30,9 +30,6 @@ main {
 }
 
 
-
-
-
 /* STILI GENERALI DEL MAIN CONTAINER */
 #main-container {
     width: 80%;
@@ -43,8 +40,6 @@ main {
     display: flex;
     margin-bottom: 30px;
     height: calc(100vh - 60px);
-    /* debug */
-    /* background-color: red; */
 }
 
 #left-bar {
@@ -57,8 +52,6 @@ main {
 
 #chat-info {
     width: 65%;
-    /* debug */
-    /* background-color: lightgreen; */
 }
 
 
@@ -82,9 +75,6 @@ main {
     width: 70px;
     color: #B1B0AE;
     margin-right: 0;
-    /* debug */
-    /* background-color: green; */
-
 }
 
 .name {
@@ -126,8 +116,6 @@ main {
     width: 100%;
     display: flex;
     padding: 5px;
-    /* debug */
-    min-height: 40px;
 }
 
 #search-chat i {
@@ -150,9 +138,7 @@ main {
 }
 
 .chat {
-    /* background-color: orange; */
     width: 100%;
-    /* border-bottom: 1px solid black; */
     min-height: 75px;
     display: flex;
     cursor: pointer;
@@ -164,7 +150,6 @@ main {
 
 .img-container {
     width: 90px;
-    /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,8 +161,6 @@ main {
     border-radius: 50%;
 }
 .chat-details {
-    /* width: calc(100% - 120px); */
-    /* background-color: yellow; */
     display: flex;
     flex-direction: column;
     position: relative;
@@ -202,7 +185,6 @@ main {
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    /* debug */
     background-image: url(img/Wallpaper.png);
     background-size: contain;
     height: calc(100vh - 140px);
@@ -255,7 +237,7 @@ main {
     align-items: center;
     /* debug */
     background-color: #F3EEEA;
-    height: 80px;
+    padding: 10px;
 }
 
 #bottom-bar i {
