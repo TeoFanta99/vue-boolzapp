@@ -160,6 +160,7 @@ main {
     height: auto;
     border-radius: 50%;
 }
+
 .chat-details {
     display: flex;
     flex-direction: column;
@@ -167,17 +168,19 @@ main {
     flex-grow: 1;
 }
 
-.last-message, .last-access {
+.last-message,
+.last-access {
     font-size: 13px;
     color: grey;
 }
 
 
 /* STILI DELLA CHAT INFO */
-#left-bar, #chat-info {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+#left-bar,
+#chat-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 #all-messages {
@@ -243,6 +246,15 @@ main {
     font-size: 30px;
     padding: 10px 20px;
     color: #576366;
+}
+
+.right-i {
+    display: none;
+    cursor: pointer;
+}
+
+.active {
+    display: block;
 }
 
 #bottom-bar input {
