@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BACKGROUND E MAIN CONTAINER */
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+.background {
+    width: 100%;
+}
+
+#top-bg {
+    background-color: #039688;
+    min-height: 150px;
+}
+
+#bottom-bg {
+    background-color: #D8DBD6;
+    min-height: calc(100vh - 150px);
+}
+
+
+/* STILI GENERALI DEL MAIN CONTAINER */
+#main-container {
+    width: 80%;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    margin-bottom: 30px;
+    height: calc(100vh - 60px);
+}
+
+#left-bar {
+    width: 35%;
+    min-width: 100px;
+    border-right: 1px solid lightgrey;
+    /* debug */
+    background-color: white;
+}
+
+#chat-info {
+    width: 65%;
+}
+
+
+/* STILI DELLA LEFT BAR */
+.user-top {
+    width: 100%;
+    background-color: #EAEAEA;
+    height: 80px;
+    display: flex;
+}
+
+.top-bar-half {
+    flex-grow: 1;
+    padding-top: 10px;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70px;
+    color: #B1B0AE;
+    margin-right: 0;
+}
+
+.name {
+    width: calc(100% - 140px);
+}
+
+
+#desktop-notification {
+    background-color: #8EDAFC;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+#desktop-notification i {
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: white;
+    color: #8EDAFC;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#notification-text {
+    display: flex;
+    flex-direction: column;
+}
+
+#notification-text a {
+    font-size: 14px;
+    color: #4F7485;
+}
+
+
+#search-chat {
+    background-color: #FAFAFA;
+    width: 100%;
+    display: flex;
+    padding: 5px;
+}
+
+#search-chat i {
+    padding: 8px 25px;
+    border: 1px solid lightgray;
+    color: #B6B9BB;
+    cursor: pointer;
+}
+
+#search-chat input {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-left: none;
+    padding: 10px;
+}
+
+#all-chat {
+    overflow-y: scroll;
+    height: calc(100vh - 200px);
+}
+
+.chat {
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    cursor: pointer;
+}
+
+.chat:hover {
+    background-color: rgb(232, 232, 232);
+}
+
+.img-container {
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container img {
+    width: 70%;
+    height: auto;
+    border-radius: 50%;
+}
+.chat-details {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-grow: 1;
+}
+
+.last-message, .last-access {
+    font-size: 13px;
+    color: grey;
+}
+
+
+/* STILI DELLA CHAT INFO */
+#left-bar, #chat-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#all-messages {
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    background-image: url(img/Wallpaper.png);
+    background-size: contain;
+    height: calc(100vh - 140px);
+}
+
+.message {
+    margin: 10px;
+    width: 40%;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.sent-message {
+    background-color: #D5F9BA;
+    align-self: flex-end;
+}
+
+.received-message {
+    background-color: white;
+}
+
+.dropdown {
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+.message-data {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    font-size: 10px;
+    color: rgb(178, 178, 178);
+    padding-top: 10px;
+}
+
+.delete-message {
+    color: grey;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 18px;
+}
+
+
+#bottom-bar {
+    display: flex;
+    align-items: center;
+    background-color: #F3EEEA;
+    padding: 10px;
+}
+
+#bottom-bar i {
+    font-size: 30px;
+    padding: 10px 20px;
+    color: #576366;
+}
+
+#bottom-bar input {
+    height: 60px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+}

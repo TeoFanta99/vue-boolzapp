@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--link ad axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js" integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- link a vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- link a fontawesome -->
+    <script src="https://kit.fontawesome.com/689deddfae.js" crossorigin="anonymous"></script>
+
+    <!-- link a css bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- link a css mio -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <main>
+
+            <!-- background -->
+            <div id="top-bg" class="background"></div>
+            <div id="bottom-bg" class="background"></div>
+
+            <!-- contenitore principale delle chat -->
+            <div id="main-container">
+
+                <!-- barra di sinistra -->
+                <div id="left-bar">
+
+                    <!-- riga top left bar -->
+                    <div class="user-top">
+                        <div class="img-container">
+                            <img src="img/Screenshot 2023-12-15 alle 15.39.19.png" alt="Matteo">
+                        </div>
+                        <div class="top-bar-half">Matteo</div>
+                        <div class="icons-container">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+
+                    </div>
+
+                    <!-- attiva le notifiche desktop -->
+                    <div id="desktop-notification">
+                        <i class="fa-regular fa-bell-slash"></i>
+                        <div id="notification-text">
+                            <span>Ricevi notifiche di nuovi messaggi</span>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+
+                    <!-- barra ricerca chat -->
+                    <div id="search-chat">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchUser">
+                    </div>
+
+                    <!-- tutte le chat -->
+                    <div id="all-chat">
+
+                        <!-- da replicare con js -->
+                        <div class="chat" v-for="(contact, i) in filteredContacts()" @click="select(i)">
+                            <div class="img-container">
+                                <img :src="contacts[i].avatar" :alt=contacts[i].name>
+                            </div>
+                            <div class="chat-details">
+                                <div class="chat-name">{{contact.name}}</div>
+                                <div class="last-message">Ultimo messaggio</div>
+                                <span class="message-data">12:00</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- box della chat nel dettaglio -->
+                <div id="chat-info">
+
+                    <!-- riga top box della chat nel dettaglio -->
+                    <div class="user-top">
+                        <div class="img-container">
+                            <img :src="contacts[activeItem].avatar" :alt=contacts[activeItem].name>
+                        </div>
+                        <div class="top-bar-half">
+                            <div class="name">{{contacts[activeItem].name}}</div>
+                            <div class="last-message">Ultimo accesso ieri alle 12:34</div>
+                        </div>
+                        <div class="icons-container">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+
+
+                    </div>
+
+                    <!-- sezione con tutti i messaggi -->
+                    <div id="all-messages" v-if="contacts[activeItem].messages.length > 0">
+
+                        <span v-for="(message, i) in contacts[activeItem].messages" :class="message.status === 'sent' ? 'sent-message' : 'received-message'" class="message">{{message.message}}
+                            <span class="message-data">12:00</span>
+                            <div class="dropdown">
+                                <button class="delete-message" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <li><a class="dropdown-item" @click="deleteMessage(i)" href="#">Cancella messaggio</a></li>
+                                  <li><a class="dropdown-item" href="#">Info messaggio</a></li>
+                                </ul>
+                              </div>
+                        </span>
+
+                        <!-- class="btn" -->
+
+                        
+
+                    </div>
+
+                    <!-- barra in basso con emoji e input per invio messaggio -->
+                    <div id="bottom-bar">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addNewMessage">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+        </main>
+
+
+
+
+
+
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
